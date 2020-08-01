@@ -23,8 +23,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
+            "styles":
+            [
+                "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "src/styles.css"
             ],
             "scripts": []
           },
@@ -88,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-node"
+    }
+  },
+  "defaultProject": "angular-node",
+  "cli": {
+    "analytics": "9e94d03c-7080-4d32-8608-5a402e805b95"
+  }
 }

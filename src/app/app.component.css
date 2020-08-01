@@ -1,0 +1,14 @@
+.row {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.row > div[class*='col-'] {
+  display: flex;
+  margin-left: 40px
+}
+
+.col-sm-3
+{
+    padding: 20px;
+}
