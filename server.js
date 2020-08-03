@@ -21,6 +21,7 @@ const normalizePort = val =>
   return false;
 };
 
+// Error handlers
 const onError = error =>
 {
   if (error.syscall !== "listen")

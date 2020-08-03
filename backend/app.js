@@ -11,8 +11,9 @@ var posts = [];
 const cities = ["Chennai", "Paris", "London"];
 var weatherPost;
 
-console.log("Initialising posts");
+//console.log("Initialising posts");
 
+//Fetching API results(weatherData) for all the three cities
 for(let i = 0; i < cities.length; i++)
 {
     apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cities[i] + "&appid=296079397582aa152131923c3b944490&units=metric";
@@ -31,6 +32,8 @@ for(let i = 0; i < cities.length; i++)
     });
 }
 
+
+// Adding headers for the CORS browser error.
 app.use((req, res, next) =>
 {
     console.log("Headers");
@@ -39,6 +42,7 @@ app.use((req, res, next) =>
     res.setHeader("Access-Control-Allow-Methods","GET, POST, PATCH, DELETE, OPTIONS");
     next();
 });
+
 
 app.post("/api/posts", (req, res, next) =>
 {
@@ -50,6 +54,7 @@ app.post("/api/posts", (req, res, next) =>
     });
 });
 
+// Returning the fetched API results to the Angular App.
 app.use("/api/posts", function(request, response, next)
 {
     console.log("My first middleware");
