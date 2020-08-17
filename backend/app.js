@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 var apiURL = "";
 var posts = [];
-const cities = ["Chennai", "Paris", "London"];
+const cities = ["Chennai", "Paris", "London", "Tokyo", "Austin", "Delhi"];
 var weatherPost;
 
 //console.log("Initialising posts");
@@ -23,11 +23,13 @@ for(let i = 0; i < cities.length; i++)
         {
             var weatherData = JSON.parse(data);
             var weatherTemp = weatherData.main.temp;
+            var main = weatherData.weather[0].main;
             var weatherDescription = weatherData.weather[0].description;
             console.log("Weather found");
-            weatherPost = {city: cities[i], temp: weatherTemp, description: weatherDescription, lon:weatherData.coord.lon, lat:weatherData.coord.lat, humidity: weatherData.main.humidity};
-            console.log(weatherData.main.humidity, weatherData.main.humidity);
+            weatherPost = {city: cities[i], temp: weatherTemp, description: weatherDescription, lon:weatherData.coord.lon, lat:weatherData.coord.lat, humidity: weatherData.main.humidity, main: main};
+            console.log(weatherPost);
             posts.push(weatherPost);
+
         });
     });
 }

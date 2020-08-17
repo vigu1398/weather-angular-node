@@ -10,5 +10,11 @@
 
 .col-sm-3
 {
-    padding: 20px;
+    padding: 30px;
+}
+
+#diagonal-split-background
+{
+    background-color: #f5fafd;
+    background-image: -webkit-linear-gradient(80deg, #f5fafd 50%, #85effd 50%);
 }

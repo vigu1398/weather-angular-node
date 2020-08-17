@@ -1,4 +1,49 @@
 .card
 {
-    padding: 20px;
+    height: 325px;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+h3
+{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 33px;
+}
+
+p
+{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+h6
+{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    font-size: 17px;
+
+}
+
+button
+{
+    border-radius: 25px;
+    background-color: #85effd;
+    color: white;
+}
+
+img
+{
+    height: 40px;
+    text-align: center;
+}
+
+.imgDiv
+{
+    text-align: center;
 }

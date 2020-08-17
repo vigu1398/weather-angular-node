@@ -1,10 +1,26 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h3 class="card-title"> Place: {{Message.city || ""}}</h3>
-    <h6 class>Temperature: {{Message.temp}}</h6>
-    <p class="card-text">Longitude: {{Message.lon || ""}}</p>
-    <p class="card-text">Latitude: {{Message.lat || ""}}</p>
-    <p class="card-text">Humidity: {{Message.humidity || ""}}</p>
-    <p class="card-text">Description: {{Message.description || ""}}</p>
+    <div class = "imgDiv">
+        <img src="../assets/images/rainy.png" alt="Weather Images">
+    </div>
+    <h3 class>{{Message.temp}}&#8451;</h3>
+    <h6 class="card-title">{{Message.city}}</h6>
+    <br>
+    <div class = "row">
+        <div class="col-sm-5">
+            <p>Humid</p>
+        </div>
+        <div class="col-sm-7">
+            <p>Description</p>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-sm-5">
+            <p class="card-text">{{Message.humidity}}</p>
+        </div>
+        <div class="col-sm-7">
+            <p class="card-text">{{Message.description}}</p>
+        </div>
+    </div>
   </div>
 </div>
